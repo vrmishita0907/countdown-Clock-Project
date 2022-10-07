@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css.css">
+  <title>CountDown Timer</title>
+</head>
+<style>
+img {
+  border: 2px dashed #030d52;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  left: auto;
+}
+</style>
+<img src="1.png" alt="Clock" >
+
+<body>
+  <div id="timer"></div>
+
+  <script type="text/javascript">
+
+    function updateTimer() {
+      future = Date.parse("jan 1, 2023 01:01:00")
+      now = new Date();
+      diff = future - now;
+
+      secs = Math.floor(diff / 1000); //1secs= 1000 millisecs
+      mins = Math.floor(diff / (1000 * 60));
+      hours = Math.floor(diff / (1000 * 60 * 60));
+      days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      d = days;
+      h = hours - days * 24;
+      m = mins - hours * 60;
+      s = secs - mins * 60;
+
+      document.getElementById("timer").innerHTML = '<div>' + d + '<span>Days</span></div>' +
+        '<div>' + h + '<span>Hours</span></div>' +
+        '<div>' + m + '<span>Minutes</span></div>' +
+        '<div>' + s + '<span>Seconds</span></div>'
+
+
+    }
+    setInterval('updateTimer()', 1000);
+  </script>
+
+</body>
+
+</html>

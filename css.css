@@ -1,0 +1,38 @@
+body {
+    background-color: lavender;
+    padding: 40vh;
+    font-family: sans-serif;
+    font-weight: initial;
+    text-align: center;
+    border-radius: 50px dotted navy;
+}
+
+#timer {
+    font-size: 5em;
+    color: white;
+    font-weight: 150;
+    /* width: 700px; */
+    flex-direction: row;
+    /* padding: 25px; */
+
+}
+
+#timer div {
+
+    display: inline-block;
+    min-width: 150px;
+    /* justify-content: space-between; */
+    padding: 25px;
+    background: navy;
+    border: 8px solid #030d52;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+#timer div span {
+    font-size: 0.40em;
+    color: #ffffff;
+    margin-top: 20px;
+    display: block;
+}
